@@ -7,12 +7,26 @@
 //
 
 #import "DYViewController.h"
+#import "DYNetworking.h"
+#import "DYWeather.h"
+#import "DYPostTest.h"
 
 @interface DYViewController ()
 
 @end
 
 @implementation DYViewController
+
+- (IBAction)click:(id)sender {
+    
+    [[DYWeather WeatherInfoFor:@"北京" secretKey:@"8b4907ecad6449cb92476b7f888284ac"] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"data = %@",x);
+    }];
+    
+//    [[DYPostTest postTest] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"data = %@",x);
+//    }];
+}
 
 - (void)viewDidLoad
 {

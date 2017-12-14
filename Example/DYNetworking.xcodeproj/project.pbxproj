@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DD716251FE25050009A8C8C /* HomePageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD716231FE2504F009A8C8C /* HomePageApi.m */; };
+		1DD7162B1FE25A93009A8C8C /* DYWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7162A1FE25A93009A8C8C /* DYWeather.m */; };
+		1DD7162E1FE2736D009A8C8C /* DYPostTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD7162D1FE2736D009A8C8C /* DYPostTest.m */; };
+		1DD716311FE274DE009A8C8C /* DYNetworkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD716301FE274DE009A8C8C /* DYNetworkingConfig.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DD716231FE2504F009A8C8C /* HomePageApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageApi.m; sourceTree = "<group>"; };
+		1DD716241FE25050009A8C8C /* HomePageApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageApi.h; sourceTree = "<group>"; };
+		1DD716291FE25A93009A8C8C /* DYWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYWeather.h; sourceTree = "<group>"; };
+		1DD7162A1FE25A93009A8C8C /* DYWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYWeather.m; sourceTree = "<group>"; };
+		1DD7162C1FE2736D009A8C8C /* DYPostTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYPostTest.h; sourceTree = "<group>"; };
+		1DD7162D1FE2736D009A8C8C /* DYPostTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPostTest.m; sourceTree = "<group>"; };
+		1DD7162F1FE274DE009A8C8C /* DYNetworkingConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYNetworkingConfig.h; sourceTree = "<group>"; };
+		1DD716301FE274DE009A8C8C /* DYNetworkingConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYNetworkingConfig.m; sourceTree = "<group>"; };
 		2BF6747A44689B1F61771824 /* Pods_DYNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EA9FB0ABB809278D18B993 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DYNetworking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYNetworking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +144,10 @@
 		6003F593195388D20070C39A /* Example for DYNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				1DD716291FE25A93009A8C8C /* DYWeather.h */,
+				1DD7162A1FE25A93009A8C8C /* DYWeather.m */,
+				1DD716241FE25050009A8C8C /* HomePageApi.h */,
+				1DD716231FE2504F009A8C8C /* HomePageApi.m */,
 				6003F59C195388D20070C39A /* DYAppDelegate.h */,
 				6003F59D195388D20070C39A /* DYAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -140,6 +156,10 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				1DD7162C1FE2736D009A8C8C /* DYPostTest.h */,
+				1DD7162D1FE2736D009A8C8C /* DYPostTest.m */,
+				1DD7162F1FE274DE009A8C8C /* DYNetworkingConfig.h */,
+				1DD716301FE274DE009A8C8C /* DYNetworkingConfig.m */,
 			);
 			name = "Example for DYNetworking";
 			path = DYNetworking;
@@ -353,10 +373,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DYNetworking_Example/Pods-DYNetworking_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DYNetworking/DYNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,9 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD716251FE25050009A8C8C /* HomePageApi.m in Sources */,
 				6003F59E195388D20070C39A /* DYAppDelegate.m in Sources */,
+				1DD7162B1FE25A93009A8C8C /* DYWeather.m in Sources */,
 				6003F5A7195388D20070C39A /* DYViewController.m in Sources */,
+				1DD7162E1FE2736D009A8C8C /* DYPostTest.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				1DD716311FE274DE009A8C8C /* DYNetworkingConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
