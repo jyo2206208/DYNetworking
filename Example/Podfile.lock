@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DYNetworking: 1bf822f89f7e19a570808a1ce3da5f5f2bb22bbc
+  DYNetworking: ad15f49ece5e09d3b392c523a2c33eecca4e6252
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
 
 PODFILE CHECKSUM: c7a8584896c256abc541e98ed3501ce7cba0e0da

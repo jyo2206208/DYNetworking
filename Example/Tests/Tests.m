@@ -7,6 +7,7 @@
 //
 
 @import XCTest;
+#import "DYWeather.h"
 
 @interface Tests : XCTestCase
 
@@ -26,9 +27,14 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testGET {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Request should succeed"];
+    [[DYWeather WeatherInfoFor:@"北京" secretKey:@"8b4907ecad6449cb92476b7f888284ac"] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"data = %@",x);
+        XCTAssertNotNil(x);
+        [expectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
 @end
