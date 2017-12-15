@@ -3,7 +3,6 @@ use_frameworks!
 
 target 'DYNetworking_Example' do
   pod 'DYNetworking', :path => '../'
-#  pod 'ReactiveObjC'
 
   target 'DYNetworking_Tests' do
     inherit! :search_paths
