@@ -2,16 +2,14 @@
 
 [![CI Status](http://img.shields.io/travis/jyo2206208/DYNetworking.svg?style=flat)](https://travis-ci.org/jyo2206208/DYNetworking)
 
-[**中文说明**](Docs/README_cn.md)
+## DYNetworking是什么
 
-## What is DYNetworking
-
-DYNetworking is an iOS netwokring library using [ReactiveObjC](https://github.com/ReactiveCocoa/ReactiveObjC) 。It encapsulated every networking request into RACSignal，to lety Foundation Reactive Programming more eazy。It also support discrete encapsulation，that's very useful in a big project。
+DYNetworking是一套使用了 [ReactiveObjC](https://github.com/ReactiveCocoa/ReactiveObjC) 的iOS网络库。他把每个网络请求都封装成标准的RACSignal，让基于RAC的异步编程更便捷。同时他还支持离散式网络请求封装，非常适合在模块化的大型项目中使用。
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.  
-1. create a class named DYNetworkingConfig，and config with baseUrl
+1. 新建一个DYNetworkingConfig的类，并配置好baseUrl
 
 ```objectivec
 #import <Foundation/Foundation.h>
@@ -32,7 +30,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ```
 
-2. Create a subClass of DYRequest
+2. 新建继承自DYRequest的类
 
 ```objectivec
 #import "DYWeather.h"
@@ -71,7 +69,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 @end
 ```
 
-use this method to get the RACSignal
+然后通过调用这个方法获得信号
 
 ```objectivec
 [[DYWeather WeatherInfoFor:@"北京" secretKey:@"8b4907ecad6449cb92476b7f888284ac"] subscribeNext:^(id  _Nullable x) {
@@ -82,7 +80,7 @@ use this method to get the RACSignal
 
 
 ## Requirements
-last support `iOS 9.3`。
+该项目最低支持 `iOS 9.3`。
 
 ## Installation
 
@@ -95,13 +93,13 @@ pod 'DYNetworking'
 
 ## Features
 
-- [x] main project and interface
-- [x] global configuration
-- [ ] RACCommand support
-- [ ] cache base on configuration
-- [ ] networking observe
-- [ ] UT and CI
-- [ ] mock data
+- [x] 主体结构和接口
+- [x] 全局配置功能
+- [ ] 基于RACCommand的返回
+- [ ] 可配置的缓存策略
+- [ ] 网络监测
+- [ ] UT和CI
+- [ ] mock数据
 
 
 
